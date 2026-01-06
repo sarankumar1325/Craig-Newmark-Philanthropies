@@ -2,8 +2,8 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto border-b border-civic-ink">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+    <section className="pt-20 sm:pt-24 lg:pt-24 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto border-b border-civic-ink">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
         
         {/* Text Column */}
         <div className="lg:col-span-7 flex flex-col justify-end min-h-[50vh]">

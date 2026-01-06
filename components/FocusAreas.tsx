@@ -68,15 +68,15 @@ export const FocusAreas: React.FC = () => {
   }, []);
 
   return (
-    <section id="focus" className="py-24 px-6 md:px-12 max-w-7xl mx-auto border-b border-civic-ink">
-       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+    <section id="focus" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto border-b border-civic-ink">
+       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         <div className="lg:col-span-3">
-          <h2 className="font-mono text-sm uppercase tracking-widest text-civic-gray mb-8">
+          <h2 className="font-mono text-xs sm:text-sm uppercase tracking-widest text-civic-gray mb-6 lg:mb-8">
             Active Focus Areas
           </h2>
         </div>
         <div className="lg:col-span-9">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-x-6 lg:gap-x-12 gap-y-12 lg:gap-y-16">
             {areas.map((area, index) => (
               <a 
                 href={area.link}

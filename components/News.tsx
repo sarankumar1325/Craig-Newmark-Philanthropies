@@ -46,10 +46,10 @@ const newsItems: NewsItem[] = [
 
 export const News: React.FC = () => {
   return (
-    <section id="news" className="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-      <div className="flex flex-col mb-12">
-        <h2 className="font-serif text-5xl text-civic-ink mb-2">Newsroom</h2>
-        <p className="font-sans text-civic-gray max-w-2xl">
+    <section id="news" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl mx-auto">
+      <div className="flex flex-col mb-8 sm:mb-12">
+        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-civic-ink mb-2">Newsroom</h2>
+        <p className="font-sans text-civic-gray max-w-2xl text-sm sm:text-base">
           Recent coverage, press releases, and thoughts on the digital public square.
         </p>
       </div>
@@ -59,7 +59,7 @@ export const News: React.FC = () => {
           <a 
             key={item.id} 
             href={item.url}
-            className="group grid grid-cols-1 md:grid-cols-12 gap-4 py-8 border-b border-civic-ink/20 hover:bg-black/5 transition-colors cursor-pointer items-baseline"
+            className="group grid grid-cols-1 sm:grid-cols-12 gap-3 sm:gap-4 py-6 sm:py-8 border-b border-civic-ink/20 hover:bg-black/5 transition-colors cursor-pointer items-baseline"
           >
             <div className="md:col-span-2 font-mono text-xs uppercase tracking-widest text-civic-gray">
               {item.date}
