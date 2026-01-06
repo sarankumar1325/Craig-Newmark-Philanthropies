@@ -37,9 +37,13 @@ export const Navigation: React.FC = () => {
           <div className="lg:col-span-5">
             <a 
               href="https://craignewmarkphilanthropies.org/" 
-              className="font-serif text-base font-medium text-gray-900 hover:text-gray-700 transition-colors duration-150"
+              className="inline-block hover:opacity-80 transition-opacity duration-150"
             >
-              craig newmark philanthropies
+              <img 
+                src="/CNP-Logo.svg" 
+                alt="Craig Newmark Philanthropies" 
+                className="h-8 w-auto"
+              />
             </a>
           </div>
 
@@ -66,9 +70,13 @@ export const Navigation: React.FC = () => {
           <div className="mb-3">
             <a 
               href="https://craignewmarkphilanthropies.org/" 
-              className="font-serif text-base font-medium text-gray-900"
+              className="inline-block hover:opacity-80 transition-opacity duration-150"
             >
-              craig newmark philanthropies
+              <img 
+                src="/CNP-Logo.svg" 
+                alt="Craig Newmark Philanthropies" 
+                className="h-6 w-auto"
+              />
             </a>
           </div>
 

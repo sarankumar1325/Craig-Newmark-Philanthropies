@@ -15,6 +15,13 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 border-b border-white/20 pb-16">
         
         <div className="md:col-span-6 lg:col-span-5">
+           <div className="mb-6">
+             <img 
+               src="/CNP-Logo-Black.svg" 
+               alt="Craig Newmark Philanthropies" 
+               className="h-10 w-auto filter invert brightness-0 opacity-90"
+             />
+           </div>
            <h4 className="font-serif text-3xl mb-6">craig newmark<br/>philanthropies</h4>
            <p className="font-sans text-white/60 max-w-md mb-8">
              Digital civic infrastructure. Building trust, protecting truth, and supporting those who serve.
