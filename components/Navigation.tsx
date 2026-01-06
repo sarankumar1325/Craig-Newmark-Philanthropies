@@ -25,9 +25,9 @@ export const Navigation: React.FC = () => {
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 border-b ${
-      scrolled ? 'h-14' : 'h-16'
-    } transition-all duration-150`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 border-b backdrop-blur-md ${
+      scrolled ? 'h-14 bg-white/95 border-gray-200/50 shadow-sm' : 'h-16 bg-white/85 border-gray-200/30'
+    } transition-all duration-200`}>
       <div className="max-w-7xl mx-auto h-full px-8 md:px-16">
         
         {/* Desktop Layout */}
@@ -37,12 +37,12 @@ export const Navigation: React.FC = () => {
           <div className="lg:col-span-5">
             <a 
               href="https://craignewmarkphilanthropies.org/" 
-              className="inline-block hover:opacity-80 transition-opacity duration-150"
+              className="inline-block hover:opacity-80 transition-opacity duration-200"
             >
               <img 
                 src="/CNP-Logo.svg" 
                 alt="Craig Newmark Philanthropies" 
-                className="h-8 w-auto"
+                className="h-8 w-auto filter brightness-0"
               />
             </a>
           </div>
@@ -54,7 +54,7 @@ export const Navigation: React.FC = () => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="text-sm font-normal text-gray-900 hover:underline underline-offset-4 transition-all duration-150"
+                  className="text-sm font-normal text-gray-900 hover:text-gray-700 hover:underline underline-offset-4 transition-all duration-200"
                 >
                   {link.label}
                 </a>
@@ -70,12 +70,12 @@ export const Navigation: React.FC = () => {
           <div className="mb-3">
             <a 
               href="https://craignewmarkphilanthropies.org/" 
-              className="inline-block hover:opacity-80 transition-opacity duration-150"
+              className="inline-block hover:opacity-80 transition-opacity duration-200"
             >
               <img 
                 src="/CNP-Logo.svg" 
                 alt="Craig Newmark Philanthropies" 
-                className="h-6 w-auto"
+                className="h-6 w-auto filter brightness-0"
               />
             </a>
           </div>
