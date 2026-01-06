@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
           <a href="https://craignewmarkphilanthropies.org/privacy-policy" className="hover:text-white/60 transition-colors">Privacy Policy</a>
         </div>
         <div>
-          designed and build by Sarankumar S
+          designed and build by <a href="https://x.com/iamsaranhere" target="_blank" rel="noopener noreferrer" className="hover:text-white/60 transition-colors">Sarankumar S</a>
         </div>
       </div>
     </footer>
