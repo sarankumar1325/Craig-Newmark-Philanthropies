@@ -18,11 +18,11 @@ export const Hero: React.FC = () => {
         {/* Image Column - Brutalist, Grayscale, Sharp Corners */}
         <div className="lg:col-span-5 relative">
           <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-200 grayscale contrast-125 brightness-90">
-             <img 
-               src="https://picsum.photos/800/1000?grayscale" 
-               alt="Portrait of Craig Newmark" 
-               className="object-cover w-full h-full mix-blend-multiply opacity-90 hover:scale-105 transition-transform duration-[2000ms] ease-out"
-             />
+              <img 
+                src="/craig-newmark-portrait.jpg" 
+                alt="Portrait of Craig Newmark" 
+                className="object-cover w-full h-full mix-blend-multiply opacity-90 hover:scale-105 transition-transform duration-[2000ms] ease-out"
+              />
              <div className="absolute bottom-2 right-2 text-[10px] font-mono text-white/70 uppercase tracking-widest">
                DSCF5376_NEWMARK
              </div>
