@@ -2,7 +2,7 @@
 
 > A mission-driven, editorial, and credible digital presence for Craig Newmark Philanthropies, focusing on trust, clarity, and civic infrastructure.
 
-![Craig Newmark Philanthropies](https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6)
+![Craig Newmark Philanthropies]
 
 ## About
 
@@ -48,20 +48,20 @@ craig-newmark-philanthropies/
 
 ## Key Features
 
-### 🎨 Design System
+###  Design System
 - **Editorial Typography:** IBM Plex Serif for headlines, Sans for UI
 - **Civic Color Palette:** Civic paper (#F7F5F3), Civic ink (#121212), Civic gray (#5A5A5A)
 - **Responsive Design:** Mobile-first approach with fluid typography
 - **Glass Morphism:** Subtle navigation backdrop blur effects
 - **Institutional Aesthetic:** Clean, credible, newspaper-masthead inspired
 
-### 🧭 Navigation
+###  Navigation
 - **Responsive Navigation:** Desktop, tablet, and mobile optimized
 - **Multi-breakpoint Design:** Hamburger menu for mobile, horizontal scroll for tablet
 - **Official Branding:** Craig Newmark Philanthropies logo integration
 - **Glass Effect:** Semi-transparent with backdrop blur
 
-### 📱 Responsive Sections
+###  Responsive Sections
 
 #### Hero Section
 - Large-scale typography with portrait image
