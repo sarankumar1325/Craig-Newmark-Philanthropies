@@ -1,27 +1,20 @@
 import React, { useState, useEffect } from 'react';
 
-const navGroups = {
-  about: [
-    { label: 'About', href: 'https://craignewmarkphilanthropies.org/about-us' },
-    { label: 'Craig Newmark', href: 'https://craignewmarkphilanthropies.org/about-us/craig-newmark-bio' },
-    { label: 'Board Memberships', href: 'https://craignewmarkphilanthropies.org/about-us/board-memberships' },
-  ],
-  focus: [
-    { label: 'Cybersecurity', href: 'https://craignewmarkphilanthropies.org/about-us/cybersecurity' },
-    { label: 'Veterans & Military Families', href: 'https://craignewmarkphilanthropies.org/about-us/veterans-and-military-families' },
-    { label: 'Promoting the Truth', href: 'https://craignewmarkphilanthropies.org/about-us/promoting-the-truth' },
-  ],
-  action: [
-    { label: 'Apply', href: 'https://craignewmarkphilanthropies.org/apply' },
-    { label: 'Newsroom', href: 'https://craignewmarkphilanthropies.org/newsroom' },
-    { label: 'Contact', href: 'https://craignewmarkphilanthropies.org/contact' },
-    { label: 'Take9', href: 'https://pausetake9.org/' },
-  ],
-};
+const navItems = [
+  { label: 'About', href: 'https://craignewmarkphilanthropies.org/about-us' },
+  { label: 'Craig', href: 'https://craignewmarkphilanthropies.org/about-us/craig-newmark-bio' },
+  { label: 'Board', href: 'https://craignewmarkphilanthropies.org/about-us/board-memberships' },
+  { label: 'Cybersecurity', href: 'https://craignewmarkphilanthropies.org/about-us/cybersecurity' },
+  { label: 'Veterans', href: 'https://craignewmarkphilanthropies.org/about-us/veterans-and-military-families' },
+  { label: 'Truth', href: 'https://craignewmarkphilanthropies.org/about-us/promoting-the-truth' },
+  { label: 'Apply', href: 'https://craignewmarkphilanthropies.org/apply' },
+  { label: 'Newsroom', href: 'https://craignewmarkphilanthropies.org/newsroom' },
+  { label: 'Contact', href: 'https://craignewmarkphilanthropies.org/contact' },
+  { label: 'Take9', href: 'https://pausetake9.org/' },
+];
 
 export const Navigation: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [searchFocused, setSearchFocused] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,139 +26,86 @@ export const Navigation: React.FC = () => {
 
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-200 ${
-      scrolled ? 'py-3 border-b border-civic-ink/15' : 'py-6 border-b border-civic-ink/10'
+      scrolled ? 'py-2 border-b border-civic-ink/15' : 'py-4 border-b border-civic-ink/10'
     }`}>
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Mobile Logo */}
-        <div className="lg:hidden mb-4">
+        <div className="lg:hidden mb-3">
           <a 
             href="https://craignewmarkphilanthropies.org/" 
-            className="font-serif text-xl font-semibold text-civic-ink tracking-tight"
+            className="font-serif text-lg font-medium text-civic-ink"
           >
             craig newmark philanthropies
           </a>
         </div>
 
-        {/* Desktop Two-Zone Layout */}
-        <div className="hidden lg:flex items-center justify-between">
+        {/* Desktop Single-Line Grid */}
+        <div className="hidden lg:grid lg:grid-cols-12 lg:items-center lg:gap-8">
           
-          {/* Left Zone - Primary Identity */}
-          <div className="flex-shrink-0">
+          {/* Left Column - Identity */}
+          <div className="lg:col-span-4">
             <a 
               href="https://craignewmarkphilanthropies.org/" 
-              className="font-serif text-lg font-semibold text-civic-ink tracking-tight hover:text-civic-gray transition-colors duration-200"
+              className="font-serif text-base font-medium text-civic-ink hover:text-civic-gray transition-colors duration-200 inline-block"
             >
               craig newmark philanthropies
             </a>
           </div>
 
-          {/* Right Zone - Primary Navigation */}
-          <div className="flex items-center space-x-12">
-            
-            {/* About & Work Group */}
-            <div className="flex items-center space-x-8">
-              {navGroups.about.map((item) => (
+          {/* Center Column - Navigation */}
+          <div className="lg:col-span-7">
+            <div className="flex items-center space-x-6 overflow-x-auto">
+              {navItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-sm text-civic-ink/80 hover:text-civic-ink transition-colors duration-200 tracking-wide"
-                  style={{ letterSpacing: '0.025em' }}
+                  className="text-sm text-civic-ink/75 hover:text-civic-ink transition-colors duration-200 whitespace-nowrap"
                 >
                   {item.label}
                 </a>
               ))}
             </div>
+          </div>
 
-            {/* Focus Areas Group */}
-            <div className="flex items-center space-x-8">
-              {navGroups.focus.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-sm text-civic-ink/80 hover:text-civic-ink transition-colors duration-200 tracking-wide"
-                  style={{ letterSpacing: '0.025em' }}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-
-            {/* Action & Media Group */}
-            <div className="flex items-center space-x-8">
-              {navGroups.action.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-sm text-civic-ink/80 hover:text-civic-ink transition-colors duration-200 tracking-wide"
-                  style={{ letterSpacing: '0.025em' }}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-
-            {/* Search */}
-            <div className="flex-shrink-0">
-              <form onSubmit={(e) => e.preventDefault()} className="relative">
-                <input
-                  type="text"
-                  placeholder="search archive"
-                  onFocus={() => setSearchFocused(true)}
-                  onBlur={() => setSearchFocused(false)}
-                  className={`bg-transparent text-sm text-civic-ink placeholder-civic-gray/70 focus:outline-none transition-all duration-200 font-sans tracking-wide ${
-                    searchFocused ? 'w-48' : 'w-32'
-                  }`}
-                  style={{
-                    borderBottom: '1px solid currentColor',
-                    paddingBottom: '2px',
-                  }}
-                />
-              </form>
-            </div>
+          {/* Right Column - Search */}
+          <div className="lg:col-span-1">
+            <form onSubmit={(e) => e.preventDefault()} className="flex justify-end">
+              <input
+                type="text"
+                placeholder="search archive"
+                className="bg-transparent text-sm text-civic-ink placeholder-civic-gray/70 focus:outline-none w-24 font-sans"
+                style={{
+                  borderBottom: '1px solid currentColor',
+                  paddingBottom: '2px',
+                }}
+              />
+            </form>
           </div>
         </div>
 
-        {/* Mobile Navigation - Simple List */}
+        {/* Mobile Navigation */}
         <div className="lg:hidden">
-          <div className="space-y-3">
-            <div>
-              <div className="text-xs font-mono uppercase tracking-widest text-civic-gray mb-2">About & Work</div>
-              {navGroups.about.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="block text-sm text-civic-ink/80 hover:text-civic-ink py-1"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-            
-            <div>
-              <div className="text-xs font-mono uppercase tracking-widest text-civic-gray mb-2">Focus Areas</div>
-              {navGroups.focus.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="block text-sm text-civic-ink/80 hover:text-civic-ink py-1"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-            
-            <div>
-              <div className="text-xs font-mono uppercase tracking-widest text-civic-gray mb-2">Action & Media</div>
-              {navGroups.action.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="block text-sm text-civic-ink/80 hover:text-civic-ink py-1"
-                >
-                  {item.label}
-                </a>
-              ))}
+          <div className="space-y-2">
+            {navItems.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block text-sm text-civic-ink/80 hover:text-civic-ink py-1"
+              >
+                {item.label}
+              </a>
+            ))}
+            <div className="pt-2 mt-2 border-t border-civic-ink/20">
+              <input
+                type="text"
+                placeholder="search archive"
+                className="bg-transparent text-sm text-civic-ink placeholder-civic-gray/70 focus:outline-none w-full font-sans"
+                style={{
+                  borderBottom: '1px solid currentColor',
+                  paddingBottom: '2px',
+                }}
+              />
             </div>
           </div>
         </div>

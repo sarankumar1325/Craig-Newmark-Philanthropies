@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="pt-32 pb-20 px-6 md:px-12 max-w-7xl mx-auto border-b border-civic-ink">
+    <section className="pt-24 pb-20 px-6 md:px-12 max-w-7xl mx-auto border-b border-civic-ink">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
         
         {/* Text Column */}
