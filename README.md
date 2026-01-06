@@ -141,27 +141,21 @@ craig-newmark-philanthropies/
    bun install
    ```
 
-3. **Environment Setup**
-   Create `.env.local` and add your API keys:
-   ```env
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-
-4. **Start development server**
+3. **Start development server**
    ```bash
    npm run dev
    # or
    bun run dev
    ```
 
-5. **Build for production**
+4. **Build for production**
    ```bash
    npm run build
    # or
    bun run build
    ```
 
-6. **Preview production build**
+5. **Preview production build**
    ```bash
    npm run preview
    # or
