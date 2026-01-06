@@ -33,8 +33,8 @@ export const Navigation: React.FC = () => {
         {/* Desktop Layout */}
         <div className="hidden lg:grid lg:grid-cols-12 lg:h-full lg:items-center">
           
-          {/* Left: Site Identity (cols 1-4) */}
-          <div className="lg:col-span-4">
+          {/* Left: Site Identity (cols 1-5) */}
+          <div className="lg:col-span-5">
             <a 
               href="https://craignewmarkphilanthropies.org/" 
               className="font-serif text-base font-medium text-gray-900 hover:text-gray-700 transition-colors duration-150"
@@ -43,8 +43,8 @@ export const Navigation: React.FC = () => {
             </a>
           </div>
 
-          {/* Center: Navigation Links (cols 5-10) */}
-          <div className="lg:col-span-6">
+          {/* Right: Navigation Links (cols 6-12) */}
+          <div className="lg:col-span-7">
             <div className="flex justify-between items-center">
               {navLinks.map((link) => (
                 <a
@@ -56,17 +56,6 @@ export const Navigation: React.FC = () => {
                 </a>
               ))}
             </div>
-          </div>
-
-          {/* Right: Search (cols 11-12) */}
-          <div className="lg:col-span-2">
-            <form onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="text"
-                placeholder="search archive"
-                className="w-full bg-transparent text-sm text-gray-900 placeholder-gray-600 focus:outline-none pb-0.5 border-b border-gray-400 focus:border-gray-700 transition-colors duration-150"
-              />
-            </form>
           </div>
         </div>
 
@@ -84,7 +73,7 @@ export const Navigation: React.FC = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex flex-col space-y-1 mb-3">
+          <div className="flex flex-col space-y-1">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -94,17 +83,6 @@ export const Navigation: React.FC = () => {
                 {link.label}
               </a>
             ))}
-          </div>
-
-          {/* Search */}
-          <div>
-            <form onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="text"
-                placeholder="search archive"
-                className="w-full bg-transparent text-sm text-gray-900 placeholder-gray-600 focus:outline-none pb-0.5 border-b border-gray-400"
-              />
-            </form>
           </div>
         </div>
       </div>
